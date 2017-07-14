@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Casey Colby</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <!-- make bundle.js script an absolute path not a relative path, so the /portfolio routes know where to look for the bundle.js script since there is only one in scripts/bundle.js and it's not in /settings/scripts/bundle.js -->
+    <base href="/" /> 
 </head>
 <body>
   <div id="app"></div>

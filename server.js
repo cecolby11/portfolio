@@ -23,18 +23,29 @@ db.once('open', function() {
 
 // Routes 
 
-// GET: mongodb query
+// GET: mongodb query - all projects
 app.get('/api/projects', function(req, res) {
   Project.find({}, function(error, doc) {
     if(error) {
       res.send(error);
     } else {
-      res.send(doc);
+      res.json(doc);
     }
   });
 }); 
 
-// POST: seeds route for database 
+// GET: mongodb query - project by id
+app.get('/api/projects/:id', function(req, res) {
+  Project.findById(req.params.id, function(error, doc) {
+    if(error) {
+      res.send(error);
+    } else {
+      res.json(doc);
+    }
+  });
+});
+
+// GET: seeds route for database 
 app.get('/createProjects', function(req, res) {
   // read in data
   fs.readFile('data.js', 'utf8', function(error, data) {

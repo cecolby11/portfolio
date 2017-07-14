@@ -12,6 +12,7 @@ import { Container } from 'semantic-ui-react';
 import Home from '../components/Home';
 import Navbar from '../components/Navbar';
 import Portfolio from '../components/Portfolio';
+import Project from '../components/Project';
 
 // export routes
 const App = (
@@ -22,6 +23,7 @@ const App = (
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/portfolio' component={Portfolio} />
+          <Route path='/portfolio/:id' component={Project} />
         </Switch>
       </Container>
     </div>

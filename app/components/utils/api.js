@@ -5,6 +5,14 @@ const apiCaller = {
     return axios.get('/api/projects').then(function(response) {
       return response.data;
     });
+  },
+
+  getProject(id) {
+    return axios.get('/api/projects/:id').then(
+      function(response) {
+        console.log(response.data);
+        return response.data;
+      });
   }
 }
 

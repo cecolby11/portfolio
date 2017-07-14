@@ -5,7 +5,8 @@
   "githubUrl": "https://github.com/cecolby11/Medical-Chat",
   "projectUrl": "https://translation-chat-b2933.firebaseapp.com/",
   "description": "A chat application enabling multilingual communication between doctors and patients via the Google Translate API. Users see their conversations in their language of choice.",
-  "role": "Back-end Javascript Focused; authentication, chat functionality, multiple users and conversations, APIs, and Firebase database."
+  "role": "Back-end Javascript Focused; authentication, chat functionality, multiple users and conversations, APIs, and Firebase database.",
+  "thumbnailUrl": "/assets/img/wcc.png"
   },
   {
   "name": "Want To Buy Candy",

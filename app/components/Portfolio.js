@@ -15,7 +15,6 @@ class Portfolio extends Component {
   componentDidMount() {
     apiCaller.getAllProjects().then(function(data) {
       this.setState({data: data});
-      console.log(this.state.data);
     }.bind(this));
   }
 
@@ -25,7 +24,7 @@ class Portfolio extends Component {
         <h1>Applications Developed</h1>
         <Card.Group itemsPerRow={2}>
           {this.state.data.map((project) => (
-            <ProjectCard key={project._id} id={project._id} name={project.name} technologies={project.technologies} description={project.description} color='blue' />
+            <ProjectCard key={project._id} id={project._id} name={project.name} technologies={project.technologies} description={project.description} thumbnail={project.thumbnailUrl} color='blue' />
           ))}
         </Card.Group>
       </div>

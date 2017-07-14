@@ -28,6 +28,9 @@ const ProjectSchema = new Schema({
   },
   role: {
     type: String
+  },
+  thumbnailUrl: {
+    type: String
   }
 });
 
