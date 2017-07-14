@@ -6,6 +6,7 @@ import {
   Link,
   Switch
 } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
 
 // Components
 import Home from '../components/Home';
@@ -17,10 +18,12 @@ const App = (
   <Router>
     <div>
       <Navbar />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/portfolio' component={Portfolio} />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/portfolio' component={Portfolio} />
+        </Switch>
+      </Container>
     </div>
   </Router>
 )
