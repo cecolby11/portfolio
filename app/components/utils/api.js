@@ -8,9 +8,8 @@ const apiCaller = {
   },
 
   getProject(id) {
-    return axios.get('/api/projects/:id').then(
+    return axios.get(`/api/projects/${id}`).then(
       function(response) {
-        console.log(response.data);
         return response.data;
       });
   }

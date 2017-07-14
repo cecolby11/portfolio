@@ -35,7 +35,7 @@ app.get('/api/projects', function(req, res) {
 }); 
 
 // GET: mongodb query - project by id
-app.get('/api/projects/:id', function(req, res) {
+app.get(`/api/projects/:id`, function(req, res) {
   Project.findById(req.params.id, function(error, doc) {
     if(error) {
       res.send(error);

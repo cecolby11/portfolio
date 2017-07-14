@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProjectCard from './Portfolio/ProjectCard';
-import { Card } from 'semantic-ui-react';
+import ProjectItem from './Portfolio/ProjectItem';
+import { Grid, Item, Divider } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 
 class Portfolio extends Component { 
@@ -8,7 +8,8 @@ class Portfolio extends Component {
     super(props);
 
     this.state = {
-      data: []
+      data: [],
+      colors: ['blue', 'purple']
     }
   }
 
@@ -20,14 +21,19 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Applications Developed</h1>
-        <Card.Group itemsPerRow={2}>
-          {this.state.data.map((project) => (
-            <ProjectCard key={project._id} id={project._id} name={project.name} technologies={project.technologies} description={project.description} thumbnail={project.thumbnailUrl} color='blue' />
-          ))}
-        </Card.Group>
-      </div>
+      <Grid>
+        <Grid.Row>
+          <h1>Applications Developed</h1>
+        </Grid.Row>
+        <Divider hidden />
+        <Grid.Row>
+          <Item.Group divided>
+            {this.state.data.map((project, index) => (
+              <ProjectItem project={project} key={project._id} color={this.state.colors[index]} />
+            ))}
+          </Item.Group>
+        </Grid.Row>
+      </Grid>
     )
   }
 }
