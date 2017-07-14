@@ -30,19 +30,21 @@ class ProjectItem extends Component {
             {this.props.project.name}
           </Item.Header>
           <Item.Meta>
-            {this.props.project.role}
+            {this.props.project.role_short}
           </Item.Meta>
           <Item.Description>
             {this.props.project.description}
           </Item.Description>
           <Item.Extra>
+            <Label.Group>
               {this.props.project.technologies.map((technology, index) => (
-                <Label size='small' color={this.props.color} key={index}>{technology}</Label>
+                <Label tag size='small' color={this.props.color} key={index}>{technology}</Label>
                 ))}
-            </Item.Extra>
-            <Item.Extra>
-              <Button floated='right' as={NavLink} to={this.state.detailLink} basic color={this.props.color}>View Detailed</Button>
-            </Item.Extra>
+            </Label.Group>
+          </Item.Extra>
+          <Item.Extra>
+            <Button floated='right' as={NavLink} to={this.state.detailLink} basic color={this.props.color}>View Detailed</Button>
+          </Item.Extra>
         </Item.Content>
       </Item>
     )

@@ -9,7 +9,8 @@ class Portfolio extends Component {
 
     this.state = {
       data: [],
-      colors: ['blue', 'purple']
+      colors: ['violet', 'blue', 'red', 'orange', 'yellow', 'olive', 'green', 'teal',
+  'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black']
     }
   }
 

@@ -26,12 +26,22 @@ const ProjectSchema = new Schema({
   description: {
     type: String
   },
+  role_short: {
+    type: String
+  },
   role: {
     type: String
   },
   thumbnailUrl: {
     type: String
-  }
+  },
+  team: {
+    type: String
+  },
+  screenshots: 
+    [{
+      type: String
+    }]
 });
 
 const Project = mongoose.model('Project', ProjectSchema);
