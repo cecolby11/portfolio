@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Item, Label, Image, Button, Divider, Grid } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
+import { Item, Label, Image, Button, Divider, Grid, Icon, Container } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 
 class Project extends Component {
@@ -24,9 +25,13 @@ class Project extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid padded>
         <Grid.Row>
-        <Item.Group relaxed>
+          <Button basic color='blue' as={NavLink} to='/portfolio'><Icon name='arrow left' />Portfolio</Button>
+        </Grid.Row>
+      <Container text>
+        <Grid.Row>
+        <Item.Group relaxed='very'>
           <Item>
             <Item.Content>
               <Item.Header>
@@ -60,7 +65,7 @@ class Project extends Component {
               <Item.Description>
                 <Label.Group>
                   {this.state.project.technologies.map((technology, index) => (
-                  <Label size='large' key={index} tag>{technology}</Label>
+                  <Label size='large' key={index}>{technology}</Label>
                   ))}
                 </Label.Group>
               </Item.Description>
@@ -78,19 +83,25 @@ class Project extends Component {
               </Item.Content>
             </Item>
           }
+          {this.state.project.screenshots.length > 0 &&
           <Item>
             <Item.Content>
               <Item.Header>
                 Screenshots
               </Item.Header>
-              {this.state.project.screenshots.map((imgSrc, index) => (
-              <Image size='medium' src={imgSrc} key={index}/>
-              ))}
+              {this.state.project.screenshots.length > 0 && 
+              <Image.Group size='big'>
+                {this.state.project.screenshots.map((imgSrc, index) => (
+                <Image src={imgSrc} key={index} />
+                ))}
+              </Image.Group>
+              }
             </Item.Content>
           </Item>
-
-        </Item.Group>
-      </Grid.Row>
+          }
+          </Item.Group>
+        </Grid.Row>
+        </Container>
       </Grid>
     )
   }

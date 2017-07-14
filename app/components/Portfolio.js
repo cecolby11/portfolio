@@ -22,13 +22,13 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid padded>
         <Grid.Row>
           <h1>Applications Developed</h1>
         </Grid.Row>
         <Divider hidden />
         <Grid.Row>
-          <Item.Group divided>
+          <Item.Group divided relaxed>
             {this.state.data.map((project, index) => (
               <ProjectItem project={project} key={project._id} color={this.state.colors[index]} />
             ))}

@@ -1,0 +1,15 @@
+body{
+  background: url('../img/textures/brillant.png');
+}
+.headshot-container {
+  padding: 0;
+  width: 100%;
+  height: calc(100vh);
+  overflow: auto;
+}
+#headshot{
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: cover;
+}
