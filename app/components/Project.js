@@ -43,7 +43,9 @@ class Project extends Component {
               </Item.Header>
               <Item.Meta>
                 <a target='_blank' href={this.state.project.githubUrl}><Button basic color='teal'>GitHub Repository</Button></a>
+                {this.state.project.projectUrl &&
                 <a target='_blank' href={this.state.project.projectUrl}><Button basic color='orange'>View App</Button></a>
+                }
               </Item.Meta>
               <Item.Description>
               {this.state.project.description}
