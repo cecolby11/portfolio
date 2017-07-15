@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProjectItem from './Portfolio/ProjectItem';
-import { Grid, Item, Divider } from 'semantic-ui-react';
+import { Grid, Item, Divider, Container } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 
 class Portfolio extends Component { 
@@ -22,6 +22,7 @@ class Portfolio extends Component {
 
   render() {
     return (
+    <Container>
       <Grid padded>
         <Grid.Row>
           <h1>Applications Developed</h1>
@@ -35,6 +36,7 @@ class Portfolio extends Component {
           </Item.Group>
         </Grid.Row>
       </Grid>
+    </Container>
     )
   }
 }

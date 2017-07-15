@@ -1,15 +1,61 @@
 body{
   background: url('../img/textures/brillant.png');
 }
-.headshot-container {
+
+/*home page*/
+.home {
+  padding: 0;
+  margin: -50px;
+  width: 100%;
+  min-height: calc(100vh);
+}
+.home .about-col {
+  padding: 8% 5% 0 5%;
+}
+.home .name {
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+.home .title {
+  font-family: 'Arsenal', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.home .headshot-container {
   padding: 0;
   width: 100%;
-  height: calc(100vh);
+  height: calc(90vh); 
   overflow: auto;
 }
-#headshot{
+.home #headshot {
   height: 100%;
   max-width: 100%;
   width: auto;
   object-fit: cover;
+}
+.home h4{
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.home p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+.home .row {
+  padding: 5px 0 5px 0;
+}
+
+/*resume page*/
+#resume-pdf {
+  width: 70%;
+  margin: 0 auto;
+  height: calc(78vh);
 }

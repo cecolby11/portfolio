@@ -25,7 +25,8 @@ class Project extends Component {
 
   render() {
     return (
-      <Grid padded>
+    <Container>
+      <Grid padded relaxed>
         <Grid.Row>
           <Button basic color='blue' as={NavLink} to='/portfolio'><Icon name='arrow left' />Portfolio</Button>
         </Grid.Row>
@@ -33,18 +34,21 @@ class Project extends Component {
         <Grid.Row>
         <Item.Group relaxed='very'>
           <Item>
+            {this.state.project.thumbnailUrl &&
+            <Item.Image size='small' wrapped src={this.state.project.thumbnailUrl} />
+            }
             <Item.Content>
               <Item.Header>
                 {this.state.project.name}
               </Item.Header>
+              <Item.Meta>
+                <a target='_blank' href={this.state.project.githubUrl}><Button basic color='teal'>GitHub Repository</Button></a>
+                <a target='_blank' href={this.state.project.projectUrl}><Button basic color='orange'>View App</Button></a>
+              </Item.Meta>
               <Item.Description>
               {this.state.project.description}
               </Item.Description>
             </Item.Content>
-            <Item.Extra>
-                <a target='_blank' href={this.state.project.githubUrl}><Button basic color='teal'>GitHub Repository</Button></a>
-                <a target='_blank' href={this.state.project.projectUrl}><Button basic color='orange'>View App</Button></a>
-            </Item.Extra>
           </Item>
           <Item>
             <Item.Content>
@@ -90,7 +94,7 @@ class Project extends Component {
                 Screenshots
               </Item.Header>
               {this.state.project.screenshots.length > 0 && 
-              <Image.Group size='big'>
+              <Image.Group size='large'>
                 {this.state.project.screenshots.map((imgSrc, index) => (
                 <Image src={imgSrc} key={index} />
                 ))}
@@ -103,6 +107,7 @@ class Project extends Component {
         </Grid.Row>
         </Container>
       </Grid>
+    </Container>
     )
   }
 }

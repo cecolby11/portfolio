@@ -9,6 +9,7 @@ const Navbar = () => (
     <Menu.Menu position="right">
       <Menu.Item name="Home" as={NavLink} to="/" />
       <Menu.Item name="Portfolio" as={NavLink} to="/portfolio" />
+      <Menu.Item name="Resume" as={NavLink} to="/resume" />
     </Menu.Menu>
   </Menu>
 )
