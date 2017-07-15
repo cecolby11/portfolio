@@ -28,7 +28,8 @@
     "/assets/img/wtbc/full_cart.png",
     "/assets/img/wtbc/ship_bill_pay.png",
     "/assets/img/wtbc/success_payment_order.png",
-    "/assets/img/wtbc/order_history.png"
+    "/assets/img/wtbc/order_history.png",
+    "/assets/img/wtbc/receipt_email.png"
   ]
   }
 ]
