@@ -24,9 +24,6 @@ class Portfolio extends Component {
     return (
     <Container>
       <Grid padded>
-        <Grid.Row>
-          <h1>Applications Developed</h1>
-        </Grid.Row>
         <Divider hidden />
         <Grid.Row>
           <Item.Group divided relaxed>

@@ -12,7 +12,7 @@ class Resume extends Component {
     <Container>
       <Grid padded>
         <Grid.Row>
-          <h2>Resume <a href="/assets/Casey_Colby_Resume.pdf" download="Casey_Colby_Resume.pdf"><Icon size="small" name="download"/></a></h2>
+          <a href="/assets/Casey_Colby_Resume.pdf" download="Casey_Colby_Resume.pdf"><Icon size="big" name="download"/></a>
         </Grid.Row>
         <Grid.Row>
           <embed id='resume-pdf' src="/assets/Casey_Colby_Resume.pdf" width="500" height="375" type='application/pdf' />
