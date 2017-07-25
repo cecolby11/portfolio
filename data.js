@@ -34,12 +34,13 @@
   },
   {
     "name": "theRpackages",
-    "technologies": ["R", "devtools", "roxygen"],
+    "technologies": ["R", "Devtools", "Roxygen2"],
     "role_short": "R Developer",
     "role": "",
     "projectUrl": "https://github.com/nu-childlab/theRpackages/blob/master/README.md",
     "githubUrl": "https://github.com/nu-childlab/theRpackages",
-    "description": "A series of R packages abstracting complex analyses and frequently used scripts into one-line functions with widespread compatibility."
+    "description": "A series of R packages abstracting complex analyses and frequently used scripts into one-line functions with widespread compatibility. Documentation with roxygen2 package.",
+    "thumbnailUrl": "/assets/img/r.png"
   },
   {
     "name": "iChildlab",

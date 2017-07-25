@@ -63,3 +63,40 @@ h1, h2, h3 {
   margin: 0 auto;
   height: calc(78vh);
 }
+
+@media screen and (max-width: 990px) {
+  .home .headshot-container{
+    max-height: 400px;
+  }
+  .home #headshot {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+  .home .about {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .home .about {
+    padding-top: 10px;
+  }
+  .home .about .name {
+    font-size: 42px;
+  }
+  .home .about .title {
+    font-size: 16px;
+  }
+  .home .headshot-container {
+    height: 320px;
+    width: 100%;
+  }
+  .home #headshot {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+  }
+}

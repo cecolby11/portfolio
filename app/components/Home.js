@@ -4,7 +4,7 @@ import { Grid, Image, Icon, Container } from 'semantic-ui-react';
 class Home extends Component { 
   render() {
     return (
-      <Grid className='home'>
+      <Grid stackable className='home'>
         <Grid.Row columns={2} className='headshot-row'>
           <Grid.Column className='headshot-container'>
             <Image id='headshot' src='/assets/img/Colby.jpg' />
@@ -22,7 +22,7 @@ class Home extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 <Grid.Column width={3}>
-                  <h4>@home</h4>
+                  <h4>@work</h4>
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <p>Lab manager and software developer for Northwestern University&#39;s Child Language Development Lab, after receiving a B.A. in Economics and Linguistics from Northwestern University in 2015.</p>
@@ -39,7 +39,7 @@ class Home extends Component {
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column width={3}>
-                  <h4>@work</h4>
+                  <h4>@home</h4>
                 </Grid.Column>
                 <Grid.Column width={13}>
                   <p>As a jazz/latin pianist and drummer, I love making music and exploring the Chicago Jazz Scene.</p>
