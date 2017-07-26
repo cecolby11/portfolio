@@ -7,14 +7,21 @@ h1, h2, h3 {
 }
 
 /*home page*/
+/*override semantic default padding so headshot takes all space*/ 
+.ui.stackable.grid>.column.row>.headshot-container {
+  padding: 0 !important;
+}
+.ui.grid>.row {
+  padding: 0;
+}
 .home {
   padding: 0;
   margin: -50px;
   width: 100%;
-  min-height: calc(100vh - 50px); /*page height - navbar height*/
+  min-height: calc(100vh - 42px); /*page height - navbar height*/
 }
 .home .about-col {
-  padding: 4% 5% 0 5%;
+  padding: 8% 10% 0 10%;
 }
 .home .about-col .about-text {
   padding: 0 5% 0 5%;
@@ -57,13 +64,6 @@ h1, h2, h3 {
   font-size: 15px;
   color: #333;
 }
-.home .row {
-  padding: 5px 0 5px 0;
-}
-/*override semantic default padding for headshot*/ 
-.ui.stackable.grid>.column.row>.headshot-container {
-  padding: 0 !important;
-}
 /*enlarge semantic default large icon size (large too small, next size up too big*/
 i.large.icon {
   font-size: 2.3em;}
@@ -79,6 +79,7 @@ i.large.icon {
 @media screen and (max-width: 990px) {
   .home .headshot-container{
     max-height: 400px;
+    overflow: hidden; /*don't scroll overflow*/
   }
   .home #headshot {
     width: 100%;
