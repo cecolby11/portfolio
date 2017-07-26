@@ -10,7 +10,7 @@ h1, h2, h3 {
   padding: 0;
   margin: -50px;
   width: 100%;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 50px); /*page height - navbar height*/
 }
 .home .about-col {
   padding: 8% 5% 0 5%;
