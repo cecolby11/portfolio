@@ -11,7 +11,7 @@ h1, h2, h3 {
 .ui.stackable.grid>.column.row>.headshot-container {
   padding: 0 !important;
 }
-.ui.grid>.row {
+.ui.home>.row {
   padding: 0;
 }
 .home {
