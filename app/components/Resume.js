@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Divider, Icon, Container } from 'semantic-ui-react';
+import { Grid, Divider, Icon, Container, Image } from 'semantic-ui-react';
 
 class Resume extends Component { 
   constructor(props) {
@@ -10,6 +10,7 @@ class Resume extends Component {
   render() {
     return (
     <Container>
+      <Image id='cover-photo' src='/assets/img/Blur.jpg' />
       <Grid padded>
         <Grid.Row>
           <a href="/assets/Casey_Colby_Resume.pdf" download="Casey_Colby_Resume.pdf"><Icon size="big" name="download"/></a>

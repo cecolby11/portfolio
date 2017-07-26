@@ -43,7 +43,7 @@ class ProjectItem extends Component {
             </Label.Group>
           </Item.Extra>
           <Item.Extra>
-            <Button floated='right' as={NavLink} to={this.state.detailLink} basic color={this.props.color}>View Detailed</Button>
+            <Button floated='right' as={NavLink} to={this.state.detailLink} basic color={this.props.color}>View Details</Button>
           </Item.Extra>
         </Item.Content>
       </Item>
