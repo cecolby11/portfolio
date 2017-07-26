@@ -5,7 +5,6 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
 }
-
 /*home page*/
 .home {
   padding: 0;
@@ -15,6 +14,9 @@ h1, h2, h3 {
 }
 .home .about-col {
   padding: 8% 5% 0 5%;
+}
+.home .about-col .about-text {
+  padding: 0 5% 0 5%;
 }
 .home .name {
   text-align: center;
@@ -36,12 +38,15 @@ h1, h2, h3 {
   width: 100%;
   height: calc(90vh); 
   overflow: auto;
+  border: red thin solid;
 }
 .home #headshot {
   height: 100%;
+  width: 100%;
   max-width: 100%;
-  width: auto;
   object-fit: cover;
+  margin: 0;
+  border: blue thin solid;
 }
 .home h4{
   font-family: 'Heebo', sans-serif;
@@ -56,12 +61,15 @@ h1, h2, h3 {
 .home .row {
   padding: 5px 0 5px 0;
 }
-
 /*resume page*/
 #resume-pdf {
   width: 70%;
   margin: 0 auto;
   height: calc(78vh);
+}
+/*override semantic default padding for headshot*/ 
+.ui.stackable.grid>.column.row>.headshot-container {
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 990px) {
@@ -74,25 +82,28 @@ h1, h2, h3 {
     height: auto;
     object-fit: cover;
     object-position: 50% 30%;
-  }
-  .home .about {
-    padding-top: 50px;
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .home .about {
+  .home .about-col {
+    border: pink thick solid;
     padding-top: 10px;
   }
-  .home .about .name {
+  .home .name {
     font-size: 42px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
-  .home .about .title {
+  .home .title {
     font-size: 16px;
+    margin-top: 0;
   }
   .home .headshot-container {
     height: 320px;
     width: 100%;
+    padding: 0 !important; 
   }
   .home #headshot {
     min-width: 100%;
