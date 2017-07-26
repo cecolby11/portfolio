@@ -37,8 +37,7 @@ h1, h2, h3 {
 }
 .home .headshot-container {
   padding: 0;
-  width: 100%;
-  height: calc(90vh); 
+  width: 100%; 
   overflow: auto;
 }
 .home #headshot {
