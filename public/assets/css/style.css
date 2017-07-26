@@ -14,10 +14,11 @@ h1, h2, h3 {
   min-height: calc(100vh - 50px); /*page height - navbar height*/
 }
 .home .about-col {
-  padding: 8% 5% 0 5%;
+  padding: 4% 5% 0 5%;
 }
 .home .about-col .about-text {
   padding: 0 5% 0 5%;
+  margin: 10px 0 10px 0;
 }
 .home .name {
   text-align: center;
@@ -66,7 +67,7 @@ h1, h2, h3 {
 }
 /*enlarge semantic default large icon size (large too small, next size up too big*/
 i.large.icon {
-  font-size: 2.2em;}
+  font-size: 2.3em;}
 
 /*resume page*/
 #resume-pdf {
