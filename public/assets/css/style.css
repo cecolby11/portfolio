@@ -25,7 +25,7 @@ h1, h2, h3 {
 }
 .home .about-col .about-text {
   padding: 0 5% 0 5%;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 10px 0;
 }
 .home .name {
   text-align: center;
@@ -33,14 +33,15 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-size: 54px;
   font-weight: 700;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 .home .title {
   font-family: 'Arsenal', sans-serif;
   text-align: center;
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 .home .headshot-container {
   padding: 0;
@@ -75,7 +76,6 @@ i.large.icon {
   height: calc(78vh);
 }
 
-
 @media screen and (max-width: 990px) {
   .home .headshot-container{
     max-height: 400px;
@@ -86,7 +86,7 @@ i.large.icon {
     max-height: 100%;
     height: auto;
     object-fit: cover;
-    object-position: 50% 30%;
+    object-position: 65% 30%;
     margin: 0;
   }
   .home .about-text {
