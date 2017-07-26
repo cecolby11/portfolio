@@ -82,6 +82,13 @@ h1, h2, h3 {
     object-position: 50% 30%;
     margin: 0;
   }
+  .home .about-text {
+    margin: 20px 0 20px 0;
+  }
+  .home .about-text h4 {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: 640px) {
