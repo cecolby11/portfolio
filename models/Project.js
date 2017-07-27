@@ -41,6 +41,12 @@ const ProjectSchema = new Schema({
   screenshots: 
     [{
       type: String
+    }],
+  videos: 
+    [{
+      src: String,
+      label: String,
+      meta: String
     }]
 });
 

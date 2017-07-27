@@ -50,13 +50,27 @@
     "githubUrl": "https://github.com/cecolby11/lgsk1",
     "description": "A series of iOS applications to conduct adult and child experiments, persist, and pre-process data.",
     "thumbnailUrl": "/assets/img/lgsk/splash.png",
-    "screenshots" : [
-      "/assets/img/lgsk/home",
-      "/assets/img/lgsk/sam_red",
-      "/assets/img/lgsk/molly_blue",
-      "/assets/img/lgsk/match_colors",
-      "/assets/img/lgsk/dots_bigger",
-      "/assets/img/lgsk/progress"
+    "videos" : [ 
+      {
+        "src": "/assets/img/lgsk/lgsk.mov",
+        "label": "longerest",
+        "meta": "whose dots are bigger?"
+      },
+      {
+        "src": "/assets/img/furniturek/furniture.mov",
+        "label": "furniture", 
+        "meta": "who has more furniture?"
+      },
+      {
+        "src": "/assets/img/eventsk/eventsk1.mov",
+        "label" : "learning the language of events",
+        "meta": "who jumped more?"
+      },
+      {
+        "src": "/assets/img/eventsk/eventsk2.mov",
+        "label": "learning the language of events",
+        "meta": "who walked more?"
+      }
     ]
   }
 ]

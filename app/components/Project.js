@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Item, Label, Image, Button, Divider, Grid, Icon, Container } from 'semantic-ui-react';
+import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header } from 'semantic-ui-react';
 import apiCaller from './utils/api';
+import ReactPlayer from 'react-player';
 
 class Project extends Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class Project extends Component {
     this.state = {
       project: {
         technologies: [],
-        screenshots: []
+        screenshots: [],
+        videos: []
       }
     }
   }
@@ -104,6 +106,28 @@ class Project extends Component {
               }
             </Item.Content>
           </Item>
+          }
+          {this.state.project.videos.length > 0 && 
+            <Card.Group>
+              <Header>
+                Videos
+              </Header>
+              {this.state.project.videos.map((video, index) => (
+                <Card key={index}>
+                  <Card.Content>
+                    <Card.Header>
+                      {video.label}
+                    </Card.Header>
+                    <Card.Meta>
+                      {video.meta}
+                    </Card.Meta>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <ReactPlayer playing url={video.src} width={320} />
+                  </Card.Content>
+                </Card>
+                ))}
+            </Card.Group>
           }
           </Item.Group>
         </Grid.Row>
