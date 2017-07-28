@@ -46,7 +46,8 @@ const ProjectSchema = new Schema({
     [{
       src: String,
       label: String,
-      meta: String
+      meta: String,
+      still: String
     }]
 });
 

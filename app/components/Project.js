@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header } from 'semantic-ui-react';
+import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header, Reveal } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 import ReactPlayer from 'react-player';
 
@@ -108,26 +108,35 @@ class Project extends Component {
           </Item>
           }
           {this.state.project.videos.length > 0 && 
-            <Card.Group>
+            <div>
               <Header>
                 Videos
               </Header>
-              {this.state.project.videos.map((video, index) => (
-                <Card key={index}>
-                  <Card.Content>
-                    <Card.Header>
-                      {video.label}
-                    </Card.Header>
-                    <Card.Meta>
-                      {video.meta}
-                    </Card.Meta>
-                  </Card.Content>
-                  <Card.Content extra>
-                    <ReactPlayer playing url={video.src} width={320} />
-                  </Card.Content>
-                </Card>
-                ))}
-            </Card.Group>
+              <Card.Group>
+                {this.state.project.videos.map((video, index) => (
+                  <Card key={index} className="ios-card">
+                    <Card.Content>
+                      <Card.Header>
+                        {video.label}
+                      </Card.Header>
+                      <Card.Meta>
+                        {video.meta}
+                      </Card.Meta>
+                    </Card.Content>
+                    <Card.Content extra>
+                      <Reveal animated='fade'>
+                        <Reveal.Content visible>
+                          <Image src={video.still} />
+                        </Reveal.Content>
+                        <Reveal.Content hidden>
+                          <ReactPlayer playing looping url={video.src} className="ios-video"/>
+                        </Reveal.Content>
+                      </Reveal>
+                    </Card.Content>
+                  </Card>
+                  ))}
+              </Card.Group>
+            </div>
           }
           </Item.Group>
         </Grid.Row>

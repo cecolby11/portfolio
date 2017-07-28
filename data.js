@@ -48,27 +48,31 @@
     "role_short": "Swift Developer",
     "role": "",
     "githubUrl": "https://github.com/cecolby11/lgsk1",
-    "description": "A series of iOS applications to conduct adult and child experiments, persist, and pre-process data.",
-    "thumbnailUrl": "/assets/img/lgsk/splash.png",
+    "description": "A series of iOS applications to conduct child experiments, persist, and pre-process data.",
+    "thumbnailUrl": "/assets/img/furniturek/splash.png",
     "videos" : [ 
       {
         "src": "/assets/img/lgsk/lgsk.mov",
+        "still": "/assets/img/lgsk/splash.png",
         "label": "longerest",
         "meta": "whose dots are bigger?"
       },
       {
         "src": "/assets/img/furniturek/furniture.mov",
+        "still": "/assets/img/furniturek/splash.png",
         "label": "furniture", 
         "meta": "who has more furniture?"
       },
       {
-        "src": "/assets/img/eventsk/eventsk1.mov",
+        "src": "/assets/img/eventsk1/eventsk1.mov",
         "label" : "learning the language of events",
+        "still" : "/assets/img/eventsk1/splash.png",
         "meta": "who jumped more?"
       },
       {
-        "src": "/assets/img/eventsk/eventsk2.mov",
+        "src": "/assets/img/eventsk2/eventsk2.mov",
         "label": "learning the language of events",
+        "still" : "/assets/img/eventsk2/response_wait.png",
         "meta": "who walked more?"
       }
     ]
