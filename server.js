@@ -48,7 +48,7 @@ app.get(`/api/projects/:id`, function(req, res) {
 });
 
 // GET: seeds route for database 
-app.get('/createProjects', function(req, res) {
+app.get('/api/createProjects', function(req, res) {
   // read in data
   fs.readFile('data.js', 'utf8', function(error, data) {
     if(error) {
