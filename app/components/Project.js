@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header, Reveal } from 'semantic-ui-react';
+import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header, Reveal, Segment } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 import ReactPlayer from 'react-player';
 
@@ -12,7 +12,7 @@ class Project extends Component {
       project: {
         technologies: [],
         screenshots: [],
-        videos: []
+        subprojects: []
       }
     }
   }
@@ -44,7 +44,9 @@ class Project extends Component {
                 {this.state.project.name}
               </Item.Header>
               <Item.Meta>
+                {this.state.project.githubUrl &&
                 <a target='_blank' href={this.state.project.githubUrl}><Button basic color='teal'>GitHub Repository</Button></a>
+                }
                 {this.state.project.projectUrl &&
                 <a target='_blank' href={this.state.project.projectUrl}><Button basic color='orange'>View App</Button></a>
                 }
@@ -107,29 +109,32 @@ class Project extends Component {
             </Item.Content>
           </Item>
           }
-          {this.state.project.videos.length > 0 && 
+          {this.state.project.subprojects.length > 0 && 
             <div>
               <Header>
-                Videos
+                Apps
               </Header>
               <Card.Group>
-                {this.state.project.videos.map((video, index) => (
+                {this.state.project.subprojects.map((subproject, index) => (
                   <Card key={index} className="ios-card">
                     <Card.Content>
                       <Card.Header>
-                        {video.label}
+                        {subproject.label}
                       </Card.Header>
                       <Card.Meta>
-                        {video.meta}
+                        {subproject.meta}
                       </Card.Meta>
+                    </Card.Content>
+                    <Card.Content extra>
+                      <a target='_blank' href={subproject.githubUrl}><Button basic color='teal'>GitHub Repository</Button></a>
                     </Card.Content>
                     <Card.Content extra>
                       <Reveal animated='fade'>
                         <Reveal.Content visible>
-                          <Image src={video.still} />
+                          <Image src={subproject.still} className="ios-still" />
                         </Reveal.Content>
                         <Reveal.Content hidden>
-                          <ReactPlayer playing looping url={video.src} className="ios-video"/>
+                          <ReactPlayer playing loop url={subproject.src} className="ios-video"/>
                         </Reveal.Content>
                       </Reveal>
                     </Card.Content>

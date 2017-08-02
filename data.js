@@ -47,33 +47,36 @@
     "technologies": ["Swift", "Xcode", "Realm", "iOS Physics Engine", "UIDynamicAnimator", "Core Graphics"],
     "role_short": "Swift Developer",
     "role": "",
-    "githubUrl": "https://github.com/cecolby11/lgsk1",
     "description": "A series of iOS applications to conduct child experiments, persist, and pre-process data.",
     "thumbnailUrl": "/assets/img/furniturek/splash.png",
-    "videos" : [ 
+    "subprojects" : [ 
       {
         "src": "/assets/img/lgsk/lgsk.mov",
         "still": "/assets/img/lgsk/splash.png",
         "label": "longerest",
-        "meta": "whose dots are bigger?"
+        "meta": "whose dots are bigger?",
+        "githubUrl": "https://github.com/cecolby11/lgsk1"
       },
       {
         "src": "/assets/img/furniturek/furniture.mov",
         "still": "/assets/img/furniturek/splash.png",
         "label": "furniture", 
-        "meta": "who has more furniture?"
+        "meta": "who has more furniture?",
+        "githubUrl": "https://github.com/nu-childlab/furniturek"
       },
       {
         "src": "/assets/img/eventsk1/eventsk1.mov",
-        "label" : "learning the language of events",
+        "label" : "learning the language of events 1",
         "still" : "/assets/img/eventsk1/splash.png",
-        "meta": "who jumped more?"
+        "meta": "who jumped more?",
+        "githubUrl": "https://github.com/nu-childlab/eventsk1"
       },
       {
         "src": "/assets/img/eventsk2/eventsk2.mov",
-        "label": "learning the language of events",
+        "label": "learning the language of events 2",
         "still" : "/assets/img/eventsk2/response_wait.png",
-        "meta": "who walked more?"
+        "meta": "who walked more?",
+        "githubUrl": "https://github.com/cecolby11/eventsk2"
       }
     ]
   },

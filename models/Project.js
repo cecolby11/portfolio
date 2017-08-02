@@ -42,12 +42,13 @@ const ProjectSchema = new Schema({
     [{
       type: String
     }],
-  videos: 
+  subprojects: 
     [{
       src: String,
       label: String,
       meta: String,
-      still: String
+      still: String,
+      githubUrl: String
     }]
 });
 

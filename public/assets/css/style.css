@@ -5,6 +5,11 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
 }
+.meta {
+  color: #333;
+  font-size: .6em;
+  font-weight: normal;
+}
 
 /*home page*/
 /*override semantic default padding so headshot takes all space*/ 
@@ -78,11 +83,10 @@ i.large.icon {
 
 /*project elements*/
 .ios-card {
-  overflow: auto;
+  overflow: contain;
 } 
 .ios-video {
   max-width: 100%;
-  border: pink thick solid;
   display: inline; /*remove extra spacing*/
 }
 
