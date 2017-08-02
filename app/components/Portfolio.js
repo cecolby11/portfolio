@@ -8,9 +8,7 @@ class Portfolio extends Component {
     super(props);
 
     this.state = {
-      data: [],
-      colors: ['violet', 'blue', 'red', 'orange', 'yellow', 'olive', 'green', 'teal',
-  'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black']
+      data: []
     }
   }
 
@@ -28,7 +26,7 @@ class Portfolio extends Component {
         <Grid.Row>
           <Item.Group divided relaxed>
             {this.state.data.map((project, index) => (
-              <ProjectItem project={project} key={project._id} color={this.state.colors[index]} />
+              <ProjectItem project={project} key={project._id} color={'blue'} />
             ))}
           </Item.Group>
         </Grid.Row>

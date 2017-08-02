@@ -75,6 +75,7 @@ i.large.icon {
   margin: 0 auto;
   height: calc(78vh);
 }
+
 /*project elements*/
 .ios-card {
   overflow: auto;
@@ -82,8 +83,7 @@ i.large.icon {
 .ios-video {
   max-width: 100%;
   border: pink thick solid;
-  display: inline;
-  vertical-align: top;
+  display: inline; /*remove extra spacing*/
 }
 
 @media screen and (max-width: 990px) {

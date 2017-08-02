@@ -79,11 +79,16 @@
   },
   {
     "name": "Green Charge",
-    "technologies": ["React.js", "React Router v4", "Particle.io API", "co2signal API", "Node.js", "Express", "Mongoose", "MongoDB", "React-sparklines", "Semantic UI React", "Passport.js"],
+    "technologies": ["React.js", "React Router v4", "Particle.io API", "co2signal API", "Node.js", "Express", "Mongoose", "MongoDB", "React-sparklines", "Semantic UI React", "Axios", "Passport.js", "JSON Web Token", "ES6"],
     "role_short": "React Developer",
-    "role": "",
+    "role": "Served as a front-end developer focused on rendering components and managing application state with React.js, react authentication with JWT and axios, React Router v4 for front-end routing, visualizing API data with react-sparklines, and layout/style with Semantic UI React.",
     "projectUrl": "https://nucb-green-charge.herokuapp.com/",
     "githubUrl": "https://github.com/wilfriedbarth/Green-Charge",
-    "description": "MERN full-stack web app that charges IoT devices when the carbon footprint of the power grid is lowest."
+    "description": "MERN full-stack web app that charges IoT devices when the carbon footprint of the power grid is lowest.",
+    "thumbnailUrl": "/assets/img/green_charge/splash.png",
+    "screenshots": [
+      "/assets/img/green_charge/main_device.png",
+      "/assets/img/green_charge/signin.png"
+    ]
   }
 ]
