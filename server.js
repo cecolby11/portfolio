@@ -2,6 +2,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const fs = require('fs');
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config();
+}
 
 const Project = require('./models/Project.js');
 
@@ -12,8 +15,11 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static('./public'));
 
 // mongoose setup
-// mongoose.connect('mongodb://localhost/projects'); 
-mongoose.connect('mongodb://heroku_g63k1p0l:qkv6liv1cb5an1o3ufrcnjep1n@ds159662.mlab.com:59662/heroku_g63k1p0l');
+if (process.env.NODE_ENV === 'production') {
+  mongoose.connect(process.env.MONGODB_URL_PROD);
+} else if (process.env.NODE_ENV === 'development') {
+  mongoose.connect(process.env.MONGODB_URL_DEV); 
+}
 
 var db = mongoose.connection;
 db.on('error', function(err) {
