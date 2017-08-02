@@ -1,6 +1,6 @@
 [
   {
-    "name": "WCC Medical Chat App",
+    "name": "WCC Medical Chat",
     "technologies": [ "Javascript", "Google Translate API", "Firebase", "Google Auth", "MaterializeCSS", "HTML", "CSS", "jQuery"], 
     "githubUrl": "https://github.com/cecolby11/Medical-Chat",
     "projectUrl": "https://medical-chat.firebaseapp.com/",
