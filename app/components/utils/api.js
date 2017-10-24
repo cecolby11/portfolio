@@ -12,6 +12,12 @@ const apiCaller = {
       function(response) {
         return response.data;
       });
+  },
+
+  getAllBlogs() {
+    return axios.get('/api/blogs').then(function(response) {
+      return response.data;
+    });
   }
 }
 

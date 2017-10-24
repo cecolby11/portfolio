@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const Project = require('./models/Project.js');
+const Blog = require('./models/Blog.js');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -42,6 +43,17 @@ app.get('/api/projects', function(req, res) {
   });
 }); 
 
+// GET: mongodb query - all blogs
+app.get('/api/blogs', function(req, res) {
+  Blog.find({}, function(error, doc) {
+    if(error) {
+      res.send(error);
+    } else {
+      res.json(doc);
+    }
+  });
+});
+
 // GET: mongodb query - project by id
 app.get(`/api/projects/:id`, function(req, res) {
   Project.findById(req.params.id, function(error, doc) {
@@ -54,9 +66,9 @@ app.get(`/api/projects/:id`, function(req, res) {
 });
 
 // GET: seeds route for database 
-app.get('/api/createProjects', function(req, res) {
-  // read in data
-  fs.readFile('data.js', 'utf8', function(error, data) {
+app.get('/api/createSeeds', function(req, res) {
+  // read in project data
+  fs.readFile('projects.js', 'utf8', function(error, data) {
     if(error) {
       console.log(error);
     } else {
@@ -71,7 +83,26 @@ app.get('/api/createProjects', function(req, res) {
             res.send(err);          }
         });
       }
-      res.redirect('/api/projects');
+      // read in blog data
+      fs.readFile('blog.js', 'utf8', function(error, data) {
+        if(error) {
+          console.log(error);
+        } else {
+          console.log('HERE');
+          // clear out database 
+          Blog.collection.drop();
+          // re-seed with blog data
+          const blogs = JSON.parse(data);
+          for (let i = 0; i < blogs.length; i++) {
+            let newBlog = new Blog(blogs[i]);
+            newBlog.save(function(err) {
+              if(err) {
+                res.send(err);          }
+            });
+          }
+          res.redirect('/api/blogs');
+        }
+      });
     }
   });
 });
