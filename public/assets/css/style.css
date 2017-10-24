@@ -26,7 +26,7 @@ h1, h2, h3 {
   min-height: calc(100vh - 42px); /*page height - navbar height*/
 }
 .home .about-col {
-  padding: 3% 10% 0 10%;
+  padding: 8% 10% 0 10%;
 }
 .home .about-col .about-text {
   padding: 0 5% 0 5%;
@@ -36,7 +36,7 @@ h1, h2, h3 {
   text-align: center;
   letter-spacing: 1px;
   font-family: 'Playfair Display', serif;
-  font-size: 54px;
+  font-size: 46px;
   font-weight: 700;
   margin-bottom: 10px;
 }
