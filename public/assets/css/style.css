@@ -26,11 +26,11 @@ h1, h2, h3 {
   min-height: calc(100vh - 42px); /*page height - navbar height*/
 }
 .home .about-col {
-  padding: 8% 10% 0 10%;
+  padding: 3% 10% 0 10%;
 }
 .home .about-col .about-text {
   padding: 0 5% 0 5%;
-  margin: 20px 0 10px 0;
+  margin: 8px 0 10px 0;
 }
 .home .name {
   text-align: center;

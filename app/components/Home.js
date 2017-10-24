@@ -27,8 +27,8 @@ class Home extends Component {
                   <h4>@work</h4>
                 </Grid.Column>
                 <Grid.Column computer={13} tablet={16}>
-                  <p>Lab manager and software developer for Northwestern University&#39;s Child Language Development Lab, after receiving a B.A. in Economics and Linguistics from Northwestern University in 2015.</p>
-                  <p>Developing mobile applications to extend the Child Lab's experimental capabilities with children sparked my zeal for programming.</p>
+                  <p>Web developer (temporary) at Northwestern University&#39;s McCormick School of Engineering.</p>
+                  <p>Previously lab manager and software developer for Northwestern University&#39;s Child Language Development Lab, after receiving a B.A. in Economics and Linguistics from Northwestern University in 2015.</p>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row className='about-text'>
@@ -36,7 +36,8 @@ class Home extends Component {
                   <h4>@school</h4>
                 </Grid.Column>
                 <Grid.Column computer={13} tablet={16}>
-                  <p>Making the leap towards full time web development: Learning to learn and problem-solve in any language like a programmer, write good code, and develop MERN stack web applications in Northwestern University&#39;s full-stack coding bootcamp.</p>
+                  <p>Developing mobile applications to extend the Child Lab's experimental capabilities with children sparked my zeal for programming.</p>
+                  <p>Making the leap towards full time web development: Learned to learn and problem-solve in any language like a programmer, write good code, and develop MERN stack web applications in Northwestern University&#39;s full-stack coding bootcamp.</p>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row className='about-text'>
