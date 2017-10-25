@@ -15,19 +15,25 @@ class BlogPost extends Component {
 
   render() {
     return(
-      <Card fluid>
+      <Card fluid className='blog-post'>
         <Card.Content>
           <Card.Header>{this.props.blog.date}</Card.Header>
-          <Card.Meta>Meta</Card.Meta>
-          <Card.Description>Text Here</Card.Description>
+          <Card.Meta>Today's Technologies and Tools</Card.Meta>
+          <Card.Description>
+            <Label.Group className='tech'>
+              {this.props.blog.technologies.map((technology, index) => (
+                <Label tag size='small' key={index}>{technology}</Label>
+                ))}
+            </Label.Group>
+          </Card.Description>
         </Card.Content>
+        {this.props.blog.accomplishments.length > 0 &&
         <Card.Content extra>
-          <Label.Group>
-            {this.props.blog.technologies.map((technology, index) => (
-              <Label tag size='small' key={index}>{technology}</Label>
-              ))}
-          </Label.Group>
+          {this.props.blog.accomplishments.map((accomplishment, index) => (
+            <li key={index}>{accomplishment}</li>
+          ))}
         </Card.Content>
+        }
       </Card>
     )
   }

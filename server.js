@@ -45,7 +45,7 @@ app.get('/api/projects', function(req, res) {
 
 // GET: mongodb query - all blogs
 app.get('/api/blogs', function(req, res) {
-  Blog.find({}, function(error, doc) {
+  Blog.find({}, null, {sort: {date: -1}}, function(error, doc) {
     if(error) {
       res.send(error);
     } else {

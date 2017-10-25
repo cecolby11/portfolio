@@ -20,7 +20,7 @@ class Blog extends Component {
 
   render() {
     return (
-    <Container>
+    <Container className='blog'>
       <Grid padded>
         <Grid.Row>
           <Card.Group>
