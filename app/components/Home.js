@@ -27,7 +27,7 @@ class Home extends Component {
                   <h4>@work</h4>
                 </Grid.Column>
                 <Grid.Column computer={13} tablet={16}>
-                  <p>Web developer (temporary) at Northwestern University&#39;s McCormick School of Engineering.</p>
+                  <p>Web developer at Northwestern University&#39;s McCormick School of Engineering (temporary).</p>
                   <p>Previously lab manager and software developer for Northwestern University&#39;s Child Language Development Lab, after receiving a B.A. in Economics and Linguistics from Northwestern University in 2015.</p>
                 </Grid.Column>
               </Grid.Row>

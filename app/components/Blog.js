@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BlogPost from './Blog/BlogPost';
-import { Grid, Card, Container } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 
 class Blog extends Component { 
@@ -23,11 +23,16 @@ class Blog extends Component {
     <Container className='blog'>
       <Grid padded>
         <Grid.Row>
-          <Card.Group>
-            {this.state.blogs.map((blog, index) => (
-              <BlogPost blog={blog} key={blog._id} />
-            ))}
-          </Card.Group>
+          <Grid.Column width={4}>
+            sidebar
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Grid centered divided='vertically' padded='vertically'>
+              {this.state.blogs.map((blog, index) => (
+                <Grid.Row><BlogPost blog={blog} key={blog._id} /></Grid.Row>
+              ))}
+            </Grid>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
     </Container>
