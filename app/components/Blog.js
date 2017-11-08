@@ -8,13 +8,24 @@ class Blog extends Component {
     super(props);
 
     this.state = {
-      blogs: []
+      allBlogs: [],
+      blogs: [],
+      tags: ["rails", "css", "cascade"]
     }
+  }
+
+  filterBlogs(event) {
+    var filteredBlogs = this.state.allBlogs;
+    filteredBlogs = this.state.blogs.filter(function(blog){
+    return blog.technologies.indexOf(event.target.value) !== -1;
+    });
+
+    this.setState({blogs: filteredBlogs});
   }
 
   componentDidMount() {
     apiCaller.getAllBlogs().then(function(data) {
-      this.setState({blogs: data});
+      this.setState({blogs: data, allBlogs: data});
     }.bind(this));
   }
 
@@ -24,7 +35,10 @@ class Blog extends Component {
       <Grid padded>
         <Grid.Row>
           <Grid.Column width={4}>
-            sidebar
+            Filter By Technology
+            {this.state.tags.map((tag, index) => (
+              <button onClick={this.filterBlogs.bind(this)} value={tag} key={index}>{tag}</button>
+            ))}
           </Grid.Column>
           <Grid.Column width={12}>
             <Grid centered divided='vertically' padded='vertically'>

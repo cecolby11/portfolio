@@ -18,7 +18,10 @@ const BlogSchema = new Schema({
   challenges: 
     [{
       type: String
-    }]
+    }],
+  icon: {
+    type: String
+  }
 });
 
 const Blog = mongoose.model('Blog', BlogSchema);

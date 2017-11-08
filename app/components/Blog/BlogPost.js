@@ -21,7 +21,7 @@ class BlogPost extends Component {
           {!this.props.blog.icon &&
             <Icon name='laptop' circular />
           }
-          {this.props.icon &&
+          {this.props.blog.icon &&
             <Icon name={this.props.blog.icon} circular />
           }
           <Header.Content>

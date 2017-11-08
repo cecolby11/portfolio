@@ -88,7 +88,6 @@ app.get('/api/createSeeds', function(req, res) {
         if(error) {
           console.log(error);
         } else {
-          console.log('HERE');
           // clear out database 
           Blog.collection.drop();
           // re-seed with blog data
