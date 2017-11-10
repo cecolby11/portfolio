@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const BlogSchema = new Schema({
   date: {
-    type: String
+    type: Date
   },
   technologies: 
     [{

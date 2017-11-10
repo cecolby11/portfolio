@@ -34,7 +34,6 @@
     "mongoose": "^4.11.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-medium-image-zoom": "^1.0.4",
     "react-moment": "^0.6.5",
     "react-player": "^0.20.0",
     "react-router-dom": "^4.1.1",

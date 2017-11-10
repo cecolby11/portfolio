@@ -28,7 +28,7 @@ h1, h2, h3 {
   padding: 0;
   margin: -50px;
   width: 100%;
-  min-height: calc(100vh - 42px); /*page height - navbar height*/
+  min-height: calc(102vh); /*page height - navbar height*/
 }
 .home .about-col {
   padding: 8% 10% 0 10%;

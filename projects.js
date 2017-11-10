@@ -20,7 +20,7 @@
     "githubUrl": "https://github.com/cecolby11/ecommerce-app",
     "description": "E-commerce web application enabling users to login, view products for sale (by category), add products to a shopping cart, checkout, and view order history.",
     "team": "Willie Barth, Taniesha Robinson, Ben Williams",
-    "thumbnailUrl": "/assets/img/wtbc/splash.png",
+    "thumbnailUrl": "/assets/img/wtbc/products_nouser.png",
     "screenshots": [
       "/assets/img/wtbc/products_nouser.png",
       "/assets/img/wtbc/signup.png",

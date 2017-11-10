@@ -9,7 +9,7 @@ import {
 
 // Components
 import Home from '../components/Home';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import Portfolio from '../components/Portfolio';
 import Project from '../components/Project';
 import Resume from '../components/Resume';
@@ -19,7 +19,7 @@ import Blog from '../components/Blog';
 const App = (
   <Router>
     <div>
-      <Navbar />
+      {/*<Navbar />*/}
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/portfolio' component={Portfolio} />

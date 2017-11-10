@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { Item, Label, Image, Button, Divider, Grid, Icon, Container, Card, Header, Reveal, Segment } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 import ReactPlayer from 'react-player';
-import ImageZoom from 'react-medium-image-zoom';
 
 class Project extends Component {
   constructor(props) {
@@ -103,19 +102,7 @@ class Project extends Component {
               {this.state.project.screenshots.length > 0 && 
               <Image.Group size='large'>
                 {this.state.project.screenshots.map((imgSrc, index) => (
-                
-                <ImageZoom
-                        image={{
-                          src: '/assets/img/lgsk/splash.png',
-                          alt: 'test',
-                          className: 'img',
-                          style: { width: '50em' }
-                        }}
-                        zoomImage={{
-                          src: '/assets/img/lgsk/splash.png',
-                          alt: 'test'
-                        }}
-                      />
+                  <Image size='huge' centered shape='rounded' src={imgSrc} />
                 ))}
               </Image.Group>
               }
