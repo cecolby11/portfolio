@@ -74,7 +74,7 @@ h1, h2, h3 {
   font-size: 15px;
 }
 /*enlarge semantic default large icon size (large too small, next size up too big*/
-i.large.icon {
+.home i.large.icon {
   font-size: 2.3em;
 }
 
@@ -83,6 +83,10 @@ i.large.icon {
   width: 70%;
   margin: 0 auto;
   height: calc(78vh);
+}
+.resume-section {
+  border: #ddd thin dotted;
+  padding: 10px;
 }
 
 /*project elements*/

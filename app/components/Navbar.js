@@ -1,13 +1,13 @@
 // Dependencies
 import React, { Component } from 'react';
-import { Nav, Link, NavLink } from 'react-router-dom';
+import { Nav, Link, NavLink, Icon } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 
 // export navbar 
 class Navbar extends Component {
   render() {
     return (
-      <Menu>
+      <Menu secondary>
         <Menu.Menu position="right">
           <Menu.Item name="Home" as={NavLink} to="/" exact/>
           <Menu.Item name="Portfolio" as={NavLink} to="/portfolio" />
