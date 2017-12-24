@@ -12,16 +12,8 @@ class Home extends Component {
           <Grid.Column className='about-col' computer={8} tablet={16}>
             <h3 className="name">Casey Colby</h3>
             <h4 className='title'>Web developer with an affinity for linguistics</h4>
+
             <Grid relaxed>
-              <Grid.Row>
-                <Grid.Column>  
-                  <Container textAlign='center'>
-                    <a target="_blank" href="https://github.com/cecolby11" className="github"><Icon name='github' size='large' color='black'/></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/caseycolby" className="linkedin"><Icon name='linkedin' size='large' color='blue' /></a>
-                    <a target="_blank" href="https://twitter.com/cecolby11" className="twitter"><Icon name='twitter' size='large' color='blue' /></a>
-                  </Container>
-                </Grid.Column>
-              </Grid.Row>
               <Grid.Row className='about-text'>
                 <Grid.Column computer={3} tablet={16}>
                   <h4>@work</h4>

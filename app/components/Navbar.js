@@ -1,15 +1,20 @@
 // Dependencies
 import React, { Component } from 'react';
-import { Nav, Link, NavLink, Icon } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react';
+import { Nav, Link, NavLink } from 'react-router-dom';
+import { Menu, Icon } from 'semantic-ui-react';
 
 // export navbar 
 class Navbar extends Component {
   render() {
     return (
-      <Menu secondary>
+      <Menu secondary pointing>
+        <Menu.Menu>
+          <Menu.Item name='github' target="_blank" href="https://github.com/cecolby11"><Icon size='large' fitted name='github alternate' color='grey'/></Menu.Item>
+          <Menu.Item name='linkedin' target="_blank" href="https://www.linkedin.com/in/caseycolby" className="linkedin"><Icon fitted name='linkedin' size='large' color='grey' /></Menu.Item>
+          <Menu.Item name='mail' href="mailto:casey.colby@northwestern.edu?Subject=Inquiry%20via%20CaseyColby.com" target="_top"><Icon size='large' fitted name='mail' color='grey' /></Menu.Item>
+        </Menu.Menu>
         <Menu.Menu position="right">
-          <Menu.Item name="Home" as={NavLink} to="/" exact/>
+          <Menu.Item name="About" as={NavLink} to="/" exact/>
           <Menu.Item name="Portfolio" as={NavLink} to="/portfolio" />
           {/*<Menu.Item name="Blog" as={NavLink} to="/blog" />*/}
           <Menu.Item name="Resume" as={NavLink} to="/resume" />
