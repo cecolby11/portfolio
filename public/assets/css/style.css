@@ -76,6 +76,13 @@ h2, h3 {
 }
 
 /*resume page*/
+.resume-download {
+  color: #444;
+}
+.resume-download a {
+  width: 100%;
+  display: block;
+}
 .accordion-title {
     background-color: white;
     border: #ddd thin solid;
@@ -95,7 +102,6 @@ h2, h3 {
 }
 .accordion {
   padding: 20px;
-  border: #ddd thin dotted;
 }
 /*project elements*/
 .ios-card {

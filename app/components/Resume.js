@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Divider, Icon, Container, Image, List, Button, Accordion } from 'semantic-ui-react';
+import { Grid, Icon, Container, List, Button, Accordion } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 class Resume extends Component { 
@@ -23,10 +23,6 @@ class Resume extends Component {
     return (
     <Container>
       <Grid padded className="resume-container">
-        <Grid.Row>
-          <a href="/assets/Casey_Colby_Resume.pdf" download="Casey_Colby_Resume.pdf">Download the PDF <Icon circular size="large" name="download"/></a>
-        </Grid.Row>
-
         <Accordion fluid>
           {/* -------- technical skill section -------- */}
           <Accordion.Title active={this.state.activeIndex === 0} onClick={this.handleClick.bind(this)}><h2 className="accordion-title" ><Icon name='dropdown' />technical skills</h2></Accordion.Title>
