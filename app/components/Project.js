@@ -30,7 +30,7 @@ class Project extends Component {
     <Container>
       <Grid padded relaxed>
         <Grid.Row>
-          <Button basic color='blue' as={NavLink} to='/portfolio'><Icon name='arrow left' />Portfolio</Button>
+          <Button basic as={NavLink} to='/portfolio'><Icon circular inverted color='teal' name='arrow left' />Portfolio</Button>
         </Grid.Row>
       <Container text>
         <Grid.Row>
@@ -102,7 +102,7 @@ class Project extends Component {
               {this.state.project.screenshots.length > 0 && 
               <Image.Group size='large'>
                 {this.state.project.screenshots.map((imgSrc, index) => (
-                  <Image size='huge' centered shape='rounded' src={imgSrc} />
+                  <Image key={index} size='huge' centered shape='rounded' src={imgSrc} />
                 ))}
               </Image.Group>
               }

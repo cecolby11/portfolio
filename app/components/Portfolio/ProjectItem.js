@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Item, Image, Label } from 'semantic-ui-react';
+import { Button, Item, Image, Label, Icon } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 class ProjectItem extends Component {
@@ -43,7 +43,7 @@ class ProjectItem extends Component {
             </Label.Group>
           </Item.Extra>
           <Item.Extra>
-            <Button floated='right' as={NavLink} to={this.state.detailLink} basic color={this.props.color}>View Details</Button>
+            <Button floated='right' as={NavLink} to={this.state.detailLink} basic>View Details <Icon circular inverted name='arrow right' color='teal' /></Button>
           </Item.Extra>
         </Item.Content>
       </Item>

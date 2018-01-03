@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #444;
   --accent-color-1: #C0B283;
-  --accent-color-2: #DCD0C0;
+  --accent-color-2: #00bbb0;
   --light-color: #F4F4F4;
 }
 
@@ -14,6 +14,18 @@ h2, h3 {
   font-family: 'Lato', serif;
   font-weight: 500;
   color: var(--accent-color-1);
+}
+#main-nav {
+  background: var(--main-bg-color); 
+}
+#main-nav a:hover {
+  color: var(--accent-color-1);
+}
+/*#main-nav a:active{
+  border-radius: .28571429rem;
+}*/
+.ui.segment {
+  border-radius: 0 !important;
 }
 
 /*home page*/
@@ -76,13 +88,7 @@ h2, h3 {
 }
 
 /*resume page*/
-.resume-download {
-  color: #444;
-}
-.resume-download a {
-  width: 100%;
-  display: block;
-}
+
 .accordion-title {
     background-color: white;
     border: #ddd thin solid;
@@ -91,10 +97,14 @@ h2, h3 {
     width: 100%;
     text-align: left;
     transition: 0.4s;
+    color: var(--main-bg-color);
 }
 .active .accordion-title{
-  background-color: var(--accent-color-1);
-  color: #444;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color-2);
+}
+.accordion-title:hover {
+  color: var(--accent-color-1);
 }
 .accordion-panel {
   margin: 10px;
