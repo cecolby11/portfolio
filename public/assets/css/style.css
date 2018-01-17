@@ -1,6 +1,6 @@
 :root {
   --main-bg-color: #444;
-  --accent-color-1: #C0B283;
+  --accent-color-1: #00A198;
   --accent-color-2: #00bbb0;
   --light-color: #F4F4F4;
 }
@@ -15,15 +15,18 @@ h2, h3 {
   font-weight: 500;
   color: var(--accent-color-1);
 }
+a {
+  color: var(--accent-color-2);
+}
+a:hover {
+  color: var(--accent-color-1);
+}
 #main-nav {
   background: var(--main-bg-color); 
 }
 #main-nav a:hover {
   color: var(--accent-color-1);
 }
-/*#main-nav a:active{
-  border-radius: .28571429rem;
-}*/
 .ui.segment {
   border-radius: 0 !important;
 }
@@ -40,7 +43,7 @@ h2, h3 {
   padding: 0;
   margin: -50px;
   width: 100%;
-  min-height: calc(102vh); /*page height - navbar height*/
+  min-height: 90vh; /*page height - navbar height*/
 }
 .home .about-col {
   padding: 8% 10% 0 10%;
@@ -150,6 +153,10 @@ h2, h3 {
 }
 
 @media screen and (max-width: 640px) {
+  #resume-download {
+    visibility: hidden;
+    display: none;
+  }
   .home .about-col {
     padding-top: 10px;
   }
@@ -171,4 +178,5 @@ h2, h3 {
     width: auto;
     height: 100%;
   }
+  /*nav collapse on mobile*/
 }
