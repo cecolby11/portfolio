@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BlogPost from './Blog/BlogPost';
-import { Grid, Container, Button } from 'semantic-ui-react';
+import { Grid, Container, Button, Card, List } from 'semantic-ui-react';
 import apiCaller from './utils/api';
 
 class Blog extends Component { 
@@ -10,23 +10,33 @@ class Blog extends Component {
     this.state = {
       allBlogs: [],
       blogs: [],
+      filterTitle: '',
       tags: ["rails", "css", "cascade", "all"]
     }
   }
 
   filterBlogs(event) {
-    if (event.target.value === 'all') {
-      this.setState({blogs: this.state.allBlogs})
+    if (event.currentTarget.textContent === 'all') {
+      this.setState({
+        blogs: this.state.allBlogs,
+        filterTitle: ''
+      });
     } else {
       var filteredBlogs = this.state.allBlogs;
+      // filter exact matches
       filteredBlogs = filteredBlogs.filter(function(blog){
-      // exact match
-      return blog.technologies.indexOf(event.target.value) !== -1;
-      // substring
-      return blog.technologies.includes(event.target.value) !== -1;
+        // return indices of substrings/matches
+        for (var i = 0; i < blog.technologies.length; i++) {
+          if (blog.technologies[i].includes(event.currentTarget.textContent)) {
+            return i;
+          }
+        }
       });
 
-      this.setState({blogs: filteredBlogs});
+      this.setState({
+        blogs: filteredBlogs,
+        filterTitle: event.currentTarget.textContent
+      });
     }
   }
 
@@ -44,18 +54,30 @@ class Blog extends Component {
     <Container className='blog'>
       <Grid padded>
         <Grid.Row>
+          <div><h1>What I'm Working On</h1></div>
+          {this.state.filterTitle &&
+            <div id="filter-header"><h3> | {this.state.filterTitle}</h3></div>
+            }
+        </Grid.Row>
+        <Grid.Row>
           <Grid.Column width={4}>
             Filter By Technology
+            <List selection verticalAlign='middle'>
             {this.state.tags.map((technology, index) => (
-              <Button basic value={technology} onClick={this.filterBlogs.bind(this)} size='small' key={index}>{technology}</Button>
+              <List.Item key = {index} onClick={this.filterBlogs.bind(this)}>
+                <List.Content>
+                  {technology}
+                </List.Content>
+              </List.Item>
               ))}
+            </List> 
           </Grid.Column>
           <Grid.Column width={12}>
-            <Grid centered divided='vertically' padded='vertically'>
-              {this.state.blogs.map((blog, index) => (
-                <Grid.Row key={blog._id}><BlogPost blog={blog} key={blog._id} /></Grid.Row>
+            <Card.Group>
+               {this.state.blogs.map((blog, index) => (
+                <BlogPost key={blog._id} blog={blog} />
               ))}
-            </Grid>
+            </Card.Group>
           </Grid.Column>
         </Grid.Row>
       </Grid>

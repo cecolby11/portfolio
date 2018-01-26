@@ -10,6 +10,11 @@ body{
   background: var(--lightcolor);
   color: var(--main-bg-color);
 }
+h1 {
+  font-family: 'Raleway', serif;
+  font-weight: 100;
+  color: var(--accent-color-2);
+}
 h2, h3 {
   font-family: 'Lato', serif;
   font-weight: 500;
@@ -126,8 +131,14 @@ a:hover {
 }
 
 /*blog*/
-.blog .tech .label {
+.blog .tech {
   background: var(--accent-color-1);
+}
+#filter-header {
+  padding: 5px;
+}
+#filter-header h3 {
+  color: var(--main-bg-color);
 }
 
 @media screen and (max-width: 990px) {

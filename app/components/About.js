@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Image, Icon, Container } from 'semantic-ui-react';
 
-class Home extends Component { 
+class About extends Component { 
   render() {
     return (
       <Grid stackable className='home'>
@@ -48,4 +48,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default About;

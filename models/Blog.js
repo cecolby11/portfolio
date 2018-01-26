@@ -15,10 +15,6 @@ const BlogSchema = new Schema({
       type: String
     }]
   ,
-  challenges: 
-    [{
-      type: String
-    }],
   icon: {
     type: String
   }

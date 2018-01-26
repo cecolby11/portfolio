@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 // Components
-import Home from '../components/Home';
+import About from '../components/About';
 import Navbar from '../components/Navbar';
 import Portfolio from '../components/Portfolio';
 import Project from '../components/Project';
@@ -23,7 +23,7 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={About} />
             <Route exact path='/portfolio' component={Portfolio} />
             <Route path='/portfolio/:id' component={Project} />
             <Route exact path='/resume' component={Resume} />
