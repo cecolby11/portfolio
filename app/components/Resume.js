@@ -7,12 +7,12 @@ class Resume extends Component {
     super(props);
 
     this.state =  { 
-      activeIndex: -1 
+      activeIndex: 0
     }
   }
 
   handleClick(e, titleProps) {
-    const index = titleProps
+    const index = titleProps.index
     const { activeIndex } = this.state
     const newIndex = activeIndex === index ? -1 : index
     this.setState({ activeIndex: newIndex })
@@ -25,7 +25,7 @@ class Resume extends Component {
       <Grid padded className="resume-container">
         <Accordion fluid>
           {/* -------- technical skill section -------- */}
-          <Accordion.Title active={this.state.activeIndex === 0} onClick={this.handleClick.bind(this)}><h2 className="accordion-title" ><Icon name='dropdown' />technical skills</h2></Accordion.Title>
+          <Accordion.Title active={this.state.activeIndex === 0} index={0} onClick={this.handleClick.bind(this)}><h2 className="accordion-title" ><Icon name='dropdown' />technical skills</h2></Accordion.Title>
           <Accordion.Content active={this.state.activeIndex === 0} className="accordion-panel">
             <List>
               <List.Item>
@@ -38,7 +38,7 @@ class Resume extends Component {
           </Accordion.Content>
 
           {/* ------- projects section -------- */}
-          <Accordion.Title active={this.state.activeIndex === 1} onClick={this.handleClick.bind(this)}><h2 className="accordion-title"><Icon name='dropdown' />applications developed</h2></Accordion.Title>
+          <Accordion.Title active={this.state.activeIndex === 1} index={1} onClick={this.handleClick.bind(this)}><h2 className="accordion-title"><Icon name='dropdown' />applications developed</h2></Accordion.Title>
           <Accordion.Content active={this.state.activeIndex === 1} className="accordion-panel">
             {/* Green Charge */}
             <Grid.Row>
@@ -76,7 +76,7 @@ class Resume extends Component {
         
 
           {/* -------- work experience -------- */}
-          <Accordion.Title active={this.state.activeIndex === 2} onClick={this.handleClick.bind(this)}>
+          <Accordion.Title active={this.state.activeIndex === 2} index={2} onClick={this.handleClick.bind(this)}>
               <h2 className="accordion-title"><Icon name='dropdown' />professional experience</h2>
           </Accordion.Title>
           <Accordion.Content active={this.state.activeIndex === 2} className="accordion-panel">
@@ -141,7 +141,7 @@ class Resume extends Component {
           </Accordion.Content>
 
         {/* -------- education section -------- */}
-          <Accordion.Title active={this.state.activeIndex === 3} onClick={this.handleClick.bind(this)}><h2 className="accordion-title"><Icon name='dropdown' />education</h2></Accordion.Title>
+          <Accordion.Title active={this.state.activeIndex === 3} index={3} onClick={this.handleClick.bind(this)}><h2 className="accordion-title"><Icon name='dropdown' />education</h2></Accordion.Title>
           <Accordion.Content active={this.state.activeIndex === 3} className="accordion-panel">
             <List verticalAlign='middle' relaxed>
               <List.Item>

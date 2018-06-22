@@ -29,7 +29,7 @@ class Navbar extends Component {
             <Menu.Menu id='nav-contact-desktop' position="right">
               <Menu.Item name='github' target="_blank" href="https://github.com/cecolby11"><Icon size='large' fitted name='github alternate' color='teal'/></Menu.Item>
               <Menu.Item name='linkedin' target="_blank" href="https://www.linkedin.com/in/caseycolby" className="linkedin"><Icon fitted name='linkedin' size='large' color='teal' /></Menu.Item>
-              <Menu.Item name='mail' href="mailto:casey.colby@northwestern.edu?Subject=Inquiry%20via%20CaseyColby.com" target="_top"><Icon size='large' fitted name='mail' color='teal' /></Menu.Item>
+              <Menu.Item name='mail' href="mailto:cecolby11@gmail.com?Subject=Inquiry%20via%20CaseyColby.com" target="_top"><Icon size='large' fitted name='mail' color='teal' /></Menu.Item>
               <Menu.Item>
                 <Button basic animated='vertical' color='teal' className='resume-download' id='resume-download'>
                   <Button.Content visible>resume.pdf</Button.Content>
