@@ -20,7 +20,7 @@ class Navbar extends Component {
                 <Dropdown.Menu>
                   <Dropdown.Item name='github' target="_blank" href="https://github.com/cecolby11"><Icon size='large' fitted name='github alternate' color='teal'/> GitHub</Dropdown.Item>
                   <Dropdown.Item name='linkedin' target="_blank" href="https://www.linkedin.com/in/caseycolby" className="linkedin"><Icon fitted name='linkedin' size='large' color='teal' /> LinkedIn</Dropdown.Item>
-                  <Dropdown.Item name='mail' href="mailto:casey.colby@northwestern.edu?Subject=Inquiry%20via%20CaseyColby.com" target="_top"><Icon size='large' fitted name='mail' color='teal' /> Email</Dropdown.Item>
+                  <Dropdown.Item name='mail' href="mailto:cecolby11@gmail.com?Subject=Inquiry%20via%20CaseyColby.com" target="_top"><Icon size='large' fitted name='mail' color='teal' /> Email</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </MediaQuery>
