@@ -7,7 +7,7 @@ class Resume extends Component {
     super(props);
 
     this.state =  { 
-      activeIndex: 0
+      activeIndex: -1
     }
   }
 
@@ -81,9 +81,20 @@ class Resume extends Component {
           </Accordion.Title>
           <Accordion.Content active={this.state.activeIndex === 2} className="accordion-panel">
             <List relaxed>
-              {/* McCormick */}
+              {/* NIT */}
               <List.Item>
                 <List.Content floated='right'>Present</List.Content>
+                <List.Content>
+                  <List.Header>IT Administrative Systems, Northwestern University</List.Header>
+                  <List.Description>
+                    <p><em>Developer Associate, Integration & Architecture</em></p>
+                  </List.Description>
+                </List.Content>
+              </List.Item>
+
+              {/* McCormick */}
+              <List.Item>
+                <List.Content floated='right'>2017-2018</List.Content>
                 <List.Content>
                   <List.Header>McCormick School of Engineering, Northwestern University</List.Header>
                   <List.Description>
